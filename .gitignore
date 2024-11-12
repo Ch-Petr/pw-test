@@ -1,2 +1,20 @@
+#Základ ignor složek
+# "!.env_example" - ! před souborem vyloučí soubor z ignoru
+# "**/*.ts" ignoruje vše co má koncovku .ts
+
+
 # Local
 _deffer/
+.vscode/
+.DS_Store/
+node_module/
+
+# Secret
+.env
+**/.secret.json
+
+# Playwright
+playwright-report/
+test-results/
+
+# další příklad git ignoru v 3. lekci na konci
