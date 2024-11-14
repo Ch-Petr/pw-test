@@ -1,4 +1,4 @@
-#Základ ignor složek
+#Základ ignor složek/souborů
 # "!.env_example" - ! před souborem vyloučí soubor z ignoru
 # "**/*.ts" ignoruje vše co má koncovku .ts
 
@@ -18,3 +18,7 @@ playwright-report/
 test-results/
 
 # další příklad git ignoru v 3. lekci na konci
+node_modules/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
