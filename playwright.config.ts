@@ -14,7 +14,6 @@ const DEFAULT_VIEWPORT = {
 export default defineConfig({
   globalTimeout: TIMEOUTS.GLOBAL_TIMEOUT,
   timeout: TIMEOUTS.TEST_TIMEOUT,
-  viewport: DEFAULT_VIEWPORT,
   testDir: './tests',
   /* Run tests in files in parallel */
   fullyParallel: false,
@@ -26,8 +25,8 @@ export default defineConfig({
   workers: process.env.CI ? 2 : 4,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [
-    ['html']
-    ['list']
+    ['html'],
+    ['list'],
   ],
 
 // --------------------------------------------USE----------------------------------------------------
@@ -55,20 +54,32 @@ export default defineConfig({
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use: { 
+        ...devices['Desktop Chrome'], 
+      },
     },
 /*
     {
       name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
+      use: { 
+        ...devices['Desktop Firefox'] },
     },
 
+    {
+      name: 'safari',
+      use: { 
+        ...devices['Desktop Safari'],
+         
+      },
+    },
+
+/*
     {
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
     },
 
-    /* Test against mobile viewports. */
+  /* Test against mobile viewports. */
     // {
     //   name: 'Mobile Chrome',
     //   use: { ...devices['Pixel 5'] },

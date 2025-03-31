@@ -10,7 +10,7 @@ _deffer/
 node_module/
 
 # Secret
-.env
+.env*
 **/.secret.json
 
 # Playwright
